@@ -12,6 +12,7 @@ import Cocoa
 
 extension CVPixelBuffer {
     // convert CVPixelBuffer to NSImage
+    // https://qiita.com/Kyome/items/87b771e13695a6fba99e
     func nsImage() -> NSImage {
         let ciImage = CIImage(cvPixelBuffer: self)
         let rep = NSCIImageRep(ciImage: ciImage)
