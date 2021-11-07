@@ -12,8 +12,7 @@ struct ContentView: View {
         #if os(iOS)
         DepthBrewView_iOS()
         #elseif os(macOS)
-        Text("Hello, world!")
-            .padding()
+        DepthBrewView_macOS()
         #endif
     }
 }

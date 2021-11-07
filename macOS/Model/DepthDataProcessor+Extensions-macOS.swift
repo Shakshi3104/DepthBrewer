@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import AVFoundation
 import Cocoa
 
 extension DepthDataProcessor {
     
     // convert AVDepthData.depthDataMap to NSImage
-    func nsImage(depthType: DepthType = .depth) -> NSImage {
+    func nsImage(depthType: DepthType = .depth) -> NSImage? {
         // if depth data's NSImage is not nil
         if depthType == .depth && depthImage != nil {
             print("🎛 depth cache")
