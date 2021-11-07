@@ -46,6 +46,7 @@
 		CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions-iOS.swift"; sourceTree = "<group>"; };
 		CE6C902327377180005239E2 /* DepthDataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthDataProcessor.swift; sourceTree = "<group>"; };
 		CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-iOS.swift"; sourceTree = "<group>"; };
+		CE9179142737F3B70059B20A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVDepthData+Extensions-macOS.swift"; sourceTree = "<group>"; };
 		CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-iOS.swift"; sourceTree = "<group>"; };
 		CECE0F412737789A00DFDB42 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		CE6C8FEF27376C92005239E2 = {
 			isa = PBXGroup;
 			children = (
+				CE9179142737F3B70059B20A /* README.md */,
 				CE6C8FF427376C92005239E2 /* Shared */,
 				CE6C900327376C93005239E2 /* macOS */,
 				CE6C901327376D45005239E2 /* iOS */,
