@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct DepthBrewView: View {
+struct DepthBrewView_iOS: View {
     /// original image
     @State private var image: UIImage?
     /// depth data
@@ -174,8 +174,8 @@ struct DepthBrewView: View {
     }
 }
 
-struct DepthBrewView_Previews: PreviewProvider {
+struct DepthBrewView_iOS_Previews: PreviewProvider {
     static var previews: some View {
-        DepthBrewView()
+        DepthBrewView_iOS()
     }
 }

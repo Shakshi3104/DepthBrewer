@@ -17,7 +17,7 @@ import Cocoa
 typealias XImage = NSImage
 #endif
 
-enum DepthType {
+enum DepthType: CaseIterable {
     case depth
     case disparity
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         #if os(iOS)
-        DepthBrewView()
+        DepthBrewView_iOS()
         #elseif os(macOS)
         Text("Hello, world!")
             .padding()
