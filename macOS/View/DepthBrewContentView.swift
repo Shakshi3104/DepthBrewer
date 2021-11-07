@@ -36,8 +36,8 @@ struct DepthBrewContentView: View {
                             .stroke(
                                 Color.primary,
                                 style: StrokeStyle(
-                                    lineWidth: 2,
-                                    dash: [5, 5, 5, 5]
+                                    lineWidth: 1,
+                                    dash: [2, 2, 2, 2]
                                 )
                             )
                         Text("Drop here")
@@ -83,7 +83,7 @@ struct DepthBrewContentView: View {
             }
             
             // Select the depth type
-            ToolbarItemGroup(placement: .principal) {
+            ToolbarItemGroup(placement: .confirmationAction) {
                 Picker(selection: $depthTypeSelection,
                        label: Text("Select the depth type")) {
                     Label {
@@ -101,6 +101,15 @@ struct DepthBrewContentView: View {
                     .tag(1)
                 }
                        .pickerStyle(SegmentedPickerStyle())
+            }
+            
+            // Save the depth data image
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    // save depth data image
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }
             }
         }
     }
