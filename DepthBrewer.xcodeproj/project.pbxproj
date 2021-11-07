@@ -25,6 +25,7 @@
 		CE6C902427377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
 		CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
 		CE6C90272737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */; };
+		CEB9CD942737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */; };
 		CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */; };
 		CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F412737789A00DFDB42 /* PhotoPicker.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions-iOS.swift"; sourceTree = "<group>"; };
 		CE6C902327377180005239E2 /* DepthDataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthDataProcessor.swift; sourceTree = "<group>"; };
 		CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-iOS.swift"; sourceTree = "<group>"; };
+		CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVDepthData+Extensions-macOS.swift"; sourceTree = "<group>"; };
 		CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-iOS.swift"; sourceTree = "<group>"; };
 		CECE0F412737789A00DFDB42 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 			children = (
 				CE42D0802737B45B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift */,
 				CE42D0822737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift */,
+				CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */,
 				CE42D0862737B7CE009B8CA7 /* DepthBrewView-macOS.swift in Sources */,
 				CE6C901C27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */,
+				CEB9CD942737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift in Sources */,
 				CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900627376C93005239E2 /* DepthBrewerApp.swift in Sources */,
 				CE42D0882737C5AC009B8CA7 /* DepthBrewContentView.swift in Sources */,

@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
+import AVFoundation
 
 struct DepthBrewContentView: View {
     /// original image
     @State private var image: NSImage?
+    /// depth data
+    @State private var depthData: AVDepthData?
     /// depth data image
     @State private var depthDataImage: NSImage?
     
@@ -20,6 +24,9 @@ struct DepthBrewContentView: View {
     @State private var isDepthDataAvailable = false
     
     @State private var depthTypeSelection = 0
+    
+    @State private var isTargeted = false
+    @State private var isPresented = false
     
     var body: some View {
         VStack {
@@ -40,10 +47,36 @@ struct DepthBrewContentView: View {
                                     dash: [2, 2, 2, 2]
                                 )
                             )
-                        Text("Drop here")
+                        
+                        VStack {
+                            Text("Drop here")
+                            Text("or")
+                            Button {
+                                isPresented.toggle()
+                            } label: {
+                                Text("Open")
+                            }
+                        }
                     }
-                        .frame(minWidth: 200, minHeight: 200)
-                        .padding()
+                    .fileImporter(isPresented: $isPresented, allowedContentTypes: [.heic, .jpeg], onCompletion: { result in
+                        switch result {
+                        case .success(let url):
+                            guard let nsImage = NSImage(contentsOf: url) else { return }
+                            image = nsImage
+                            
+                            depthData = AVDepthData.fromURL(url)
+                            isDepthDataAvailable = depthData != nil
+                        case .failure:
+                            print("failure")
+                        }
+                    })
+                    .onDrop(of: [.jpeg, .heic, .url, .fileURL],
+                            isTargeted: $isTargeted) { providers, cgPoint in
+                        processDroppedImage(providers: providers)
+                    }
+                    
+                    .frame(minWidth: 200, minHeight: 200)
+                    .padding()
                 }
                 
                 if let depthDataImage = depthDataImage {
@@ -112,6 +145,38 @@ struct DepthBrewContentView: View {
                 }
             }
         }
+    }
+    
+    // MARK: -
+    // https://genjiapp.com/blog/2021/09/06/swiftui-open-file.html
+    private func processDroppedImage(providers: [NSItemProvider]) -> Bool {
+        guard let provider = providers.first else { return false }
+        
+        if provider.hasItemConformingToTypeIdentifier(UTType.image.identifier) {
+            provider.loadItem(forTypeIdentifier: UTType.image.identifier, options: nil) { data, error in
+                guard let data = data as? Data,
+                      let nsImage = NSImage(data: data)
+                else { return }
+                image = nsImage
+                
+                depthData = AVDepthData.fromData(data)
+                isDepthDataAvailable = depthData != nil
+            }
+        }
+        else if provider.hasItemConformingToTypeIdentifier(UTType.url.identifier) {
+            provider.loadItem(forTypeIdentifier: UTType.url.identifier, options: nil) { data, error in
+                guard let data = data as? Data,
+                      let url = URL(dataRepresentation: data, relativeTo: nil),
+                      let nsImage = NSImage(contentsOf: url)
+                else { return }
+                image = nsImage
+                
+                depthData = AVDepthData.fromURL(url)
+                isDepthDataAvailable = depthData != nil
+            }
+        }
+        
+        return true
     }
 }
 
