@@ -1,5 +1,5 @@
 //
-//  DepthDataProcessor+Extensions.swift
+//  DepthDataProcessor+Extensions-iOS.swift
 //  DepthBrewer (iOS)
 //
 //  Created by MacBook Pro on 2021/11/07.
@@ -37,7 +37,7 @@ extension DepthDataProcessor {
         
         // Convert AVDepthData.depthDataMap to UIImage
         let normaizedDepthMap = convertedDepthData.depthDataMap.normalize()
-        let depthDataImage = normaizedDepthMap.convertToUIImage(orientation: orientation)
+        let depthDataImage = normaizedDepthMap.uiImage(orientation: orientation)
         
         // cache
         switch depthType {

@@ -1,5 +1,5 @@
 //
-//  CVPixelBuffer+Extensions.swift
+//  CVPixelBuffer+Extensions-iOS.swift
 //  DepthBrewer (iOS)
 //
 //  Created by MacBook Pro on 2021/11/07.
@@ -12,7 +12,7 @@ import UIKit
 
 extension CVPixelBuffer {
     // convert CVPixelBuffer to UIImage
-    func convertToUIImage(orientation: UIImage.Orientation) -> UIImage? {
+    func uiImage(orientation: UIImage.Orientation) -> UIImage? {
         let ciImage = CIImage(cvPixelBuffer: self)
         let cgImage = CIContext().createCGImage(ciImage, from: ciImage.extent)
         guard let image = cgImage else { return nil }
