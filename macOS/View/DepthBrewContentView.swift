@@ -178,6 +178,17 @@ struct DepthBrewContentView: View {
         
         return true
     }
+    
+    // MARK: - Brew depth data image
+    private func brewDepthDataImage(_ depthType: DepthType) {
+        // init DepthDataBrewer
+        if let depthData = depthData, depthDataProcessor == nil {
+            depthDataProcessor = DepthDataProcessor(depthData)
+        }
+        
+        // brew depth data image
+        // ...
+    }
 }
 
 struct DepthBrewContentView_Previews: PreviewProvider {

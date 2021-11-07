@@ -161,6 +161,7 @@ struct DepthBrewView_iOS: View {
         }
     }
     
+    // MARK: - Brew depth data image
     private func brewDepthDataImage(_ depthType: DepthType) {
         // init DepthDataBrewer
         if let depthData = depthData, depthDataProcessor == nil {
