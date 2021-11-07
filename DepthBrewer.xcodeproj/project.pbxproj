@@ -13,6 +13,16 @@
 		CE6C900827376C93005239E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8FF627376C92005239E2 /* ContentView.swift */; };
 		CE6C900927376C93005239E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6C8FF727376C93005239E2 /* Assets.xcassets */; };
 		CE6C900A27376C93005239E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6C8FF727376C93005239E2 /* Assets.xcassets */; };
+		CE6C901627376F69005239E2 /* AVDepthData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */; };
+		CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */; };
+		CE6C901B27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */; };
+		CE6C901C27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */; };
+		CE6C901F273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */; };
+		CE6C902427377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
+		CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
+		CE6C90272737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */; };
+		CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */; };
+		CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F412737789A00DFDB42 /* PhotoPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,13 @@
 		CE6C8FFC27376C93005239E2 /* DepthBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C900227376C93005239E2 /* DepthBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C900427376C93005239E2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVDepthData+Extensions.swift"; sourceTree = "<group>"; };
+		CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions.swift"; sourceTree = "<group>"; };
+		CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions-iOS.swift"; sourceTree = "<group>"; };
+		CE6C902327377180005239E2 /* DepthDataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthDataProcessor.swift; sourceTree = "<group>"; };
+		CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-iOS.swift"; sourceTree = "<group>"; };
+		CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-iOS.swift"; sourceTree = "<group>"; };
+		CECE0F412737789A00DFDB42 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			children = (
 				CE6C8FF427376C92005239E2 /* Shared */,
 				CE6C900327376C93005239E2 /* macOS */,
+				CE6C901327376D45005239E2 /* iOS */,
 				CE6C8FFD27376C93005239E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +72,7 @@
 		CE6C8FF427376C92005239E2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C901427376F4E005239E2 /* Model */,
 				CE6C8FF527376C92005239E2 /* DepthBrewerApp.swift */,
 				CE6C8FF627376C92005239E2 /* ContentView.swift */,
 				CE6C8FF727376C93005239E2 /* Assets.xcassets */,
@@ -76,6 +95,43 @@
 				CE6C900427376C93005239E2 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		CE6C901327376D45005239E2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C90202737713E005239E2 /* View */,
+				CE6C901D273770D1005239E2 /* Model */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		CE6C901427376F4E005239E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */,
+				CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */,
+				CE6C902327377180005239E2 /* DepthDataProcessor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE6C901D273770D1005239E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */,
+				CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE6C90202737713E005239E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */,
+				CECE0F412737789A00DFDB42 /* PhotoPicker.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6C90272737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift in Sources */,
 				CE6C900727376C93005239E2 /* ContentView.swift in Sources */,
+				CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */,
+				CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */,
+				CE6C901B27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */,
+				CE6C902427377180005239E2 /* DepthDataProcessor.swift in Sources */,
+				CE6C901627376F69005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900527376C93005239E2 /* DepthBrewerApp.swift in Sources */,
+				CE6C901F273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6C900827376C93005239E2 /* ContentView.swift in Sources */,
+				CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */,
+				CE6C901C27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */,
+				CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900627376C93005239E2 /* DepthBrewerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +310,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -297,6 +365,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -314,12 +384,13 @@
 				DEVELOPMENT_TEAM = WHBF4Z49B6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "DepthBrewer needs to access your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,12 +415,13 @@
 				DEVELOPMENT_TEAM = WHBF4Z49B6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "DepthBrewer needs to access your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
