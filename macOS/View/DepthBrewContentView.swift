@@ -24,13 +24,14 @@ struct DepthBrewContentView: View {
     @State private var isDepthDataAvailable = false
     
     @State private var depthTypeSelection = 0
+    private let depthTypes = DepthType.allCases
     
     @State private var isTargeted = false
     @State private var isPresented = false
     
     var body: some View {
         VStack {
-            HStack {
+            HStack(spacing: 5) {
                 // MARK: - original image
                 if let image = image {
                     Image(nsImage: image)
@@ -146,6 +147,8 @@ struct DepthBrewContentView: View {
     private var runButton: some View {
         Button {
             // brew depth data image
+            let selectedDeptyType = depthTypes[depthTypeSelection]
+            brewDepthDataImage(selectedDeptyType)
         } label: {
             Image(systemName: "arrowtriangle.right.fill")
         }
@@ -182,9 +185,19 @@ struct DepthBrewContentView: View {
         }
     }
     
+    // MARK: -
+    // Clean depthData
+    private func cleanDepthData() {
+        depthData = nil
+        depthDataImage = nil
+        depthDataProcessor = nil
+    }
+    
     // MARK: - Process a dropped image
     // https://genjiapp.com/blog/2021/09/06/swiftui-open-file.html
     private func processDroppedImage(providers: [NSItemProvider]) -> Bool {
+        cleanDepthData()
+        
         guard let provider = providers.first else { return false }
         
         if provider.hasItemConformingToTypeIdentifier(UTType.image.identifier) {
@@ -222,7 +235,7 @@ struct DepthBrewContentView: View {
         }
         
         // brew depth data image
-        // ...
+        depthDataImage = depthDataProcessor?.nsImage(depthType: depthType)
     }
 }
 
