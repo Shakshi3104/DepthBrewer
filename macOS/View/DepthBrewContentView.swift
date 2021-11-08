@@ -95,11 +95,20 @@ struct DepthBrewContentView: View {
                         .frame(minWidth: 200)
                         .padding()
                 } else {
-                    Image(nsImage: NSImage())
-                        .resizable()
-                        .scaledToFit()
-                        .frame(minWidth: 200)
-                        .padding()
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(
+                                Color.primary,
+                                style: StrokeStyle(
+                                    lineWidth: 1,
+                                    dash: [2, 2, 2, 2]
+                                )
+                            )
+                        
+                        Text("No Depth Data")
+                    }
+                    .frame(minWidth: 200, minHeight: 200)
+                    .padding()
                 }
             }
         }
