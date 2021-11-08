@@ -31,12 +31,18 @@ struct DepthBrewContentView: View {
     var body: some View {
         VStack {
             HStack {
+                // MARK: - original image
                 if let image = image {
                     Image(nsImage: image)
                         .resizable()
                         .scaledToFit()
                         .frame(minWidth: 200)
                         .padding()
+                        // onDrop
+                        .onDrop(of: [.jpeg, .heic, .url, .fileURL],
+                                isTargeted: $isTargeted) { providers, cgPoint in
+                            processDroppedImage(providers: providers)
+                        }
                 } else {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -58,6 +64,7 @@ struct DepthBrewContentView: View {
                             }
                         }
                     }
+                    // MARK: - fileImporter
                     .fileImporter(isPresented: $isPresented, allowedContentTypes: [.heic, .jpeg], onCompletion: { result in
                         switch result {
                         case .success(let url):
@@ -70,15 +77,16 @@ struct DepthBrewContentView: View {
                             print("failure")
                         }
                     })
+                    // MARK: - onDrop (init)
                     .onDrop(of: [.jpeg, .heic, .url, .fileURL],
                             isTargeted: $isTargeted) { providers, cgPoint in
                         processDroppedImage(providers: providers)
                     }
-                    
                     .frame(minWidth: 200, minHeight: 200)
                     .padding()
                 }
                 
+                // MARK: - depth data image
                 if let depthDataImage = depthDataImage {
                     Image(nsImage: depthDataImage)
                         .resizable()
@@ -94,6 +102,17 @@ struct DepthBrewContentView: View {
                 }
             }
         }
+        // MARK: -  Touch Bar
+        // FIXME: Not displaying buttons on Touch Bar
+        .focusable()
+        .touchBar {
+            runButton
+            
+            depthTypePicker
+            
+            saveButton
+        }
+        // MARK: - Tool Bar
         .toolbar {
             // Close the sidebar
             ToolbarItem(placement: .navigation) {
@@ -107,47 +126,63 @@ struct DepthBrewContentView: View {
             
             // Brew depth data image
             ToolbarItem(placement: .navigation) {
-                Button {
-                    // brew depth data image
-                } label: {
-                    Image(systemName: "arrowtriangle.right.fill")
-                }
-                .disabled(!isDepthDataAvailable)
+                runButton
             }
             
             // Select the depth type
             ToolbarItemGroup(placement: .confirmationAction) {
-                Picker(selection: $depthTypeSelection,
-                       label: Text("Select the depth type")) {
-                    Label {
-                        Text("Depth")
-                    } icon: {
-                        Image(systemName: "squareshape.squareshape.dashed")
-                    }
-                    .tag(0)
-        
-                    Label {
-                        Text("Disparity")
-                    } icon: {
-                        Image(systemName: "square.on.square.dashed")
-                    }
-                    .tag(1)
-                }
-                       .pickerStyle(SegmentedPickerStyle())
+                depthTypePicker
             }
             
             // Save the depth data image
             ToolbarItem(placement: .primaryAction) {
-                Button {
-                    // save depth data image
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
-                }
+                saveButton
             }
         }
     }
     
-    // MARK: -
+    // MARK: - Tool Bar Item & Touch Bar Item
+    /// Button to brew a depth data image
+    private var runButton: some View {
+        Button {
+            // brew depth data image
+        } label: {
+            Image(systemName: "arrowtriangle.right.fill")
+        }
+        .disabled(!isDepthDataAvailable)
+    }
+    
+    /// Picker to select a depth type
+    private var depthTypePicker: some View {
+        Picker(selection: $depthTypeSelection,
+               label: Text("Select the depth type")) {
+            Label {
+                Text("Depth")
+            } icon: {
+                Image(systemName: "squareshape.squareshape.dashed")
+            }
+            .tag(0)
+
+            Label {
+                Text("Disparity")
+            } icon: {
+                Image(systemName: "square.on.square.dashed")
+            }
+            .tag(1)
+        }
+               .pickerStyle(SegmentedPickerStyle())
+    }
+    
+    /// Button to save the depth data image
+    private var saveButton: some View {
+        Button {
+            // save depth data image
+        } label: {
+            Image(systemName: "square.and.arrow.up")
+        }
+    }
+    
+    // MARK: - Process a dropped image
     // https://genjiapp.com/blog/2021/09/06/swiftui-open-file.html
     private func processDroppedImage(providers: [NSItemProvider]) -> Bool {
         guard let provider = providers.first else { return false }

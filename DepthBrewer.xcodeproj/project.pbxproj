@@ -26,6 +26,7 @@
 		CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
 		CE6C90272737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */; };
 		CEB9CD942737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */; };
+		CEBE5EAA2738B63600ADC273 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE5EA92738B63600ADC273 /* FocusView.swift */; };
 		CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */; };
 		CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F412737789A00DFDB42 /* PhotoPicker.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-iOS.swift"; sourceTree = "<group>"; };
 		CE9179142737F3B70059B20A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVDepthData+Extensions-macOS.swift"; sourceTree = "<group>"; };
+		CEBE5EA92738B63600ADC273 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-iOS.swift"; sourceTree = "<group>"; };
 		CECE0F412737789A00DFDB42 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 			children = (
 				CE42D0852737B7CE009B8CA7 /* DepthBrewView-macOS.swift */,
 				CE42D0872737C5AC009B8CA7 /* DepthBrewContentView.swift */,
+				CEBE5EA92738B63600ADC273 /* FocusView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				CEB9CD942737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift in Sources */,
 				CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900627376C93005239E2 /* DepthBrewerApp.swift in Sources */,
+				CEBE5EAA2738B63600ADC273 /* FocusView.swift in Sources */,
 				CE42D0882737C5AC009B8CA7 /* DepthBrewContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
