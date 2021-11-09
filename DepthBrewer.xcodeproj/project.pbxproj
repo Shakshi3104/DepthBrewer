@@ -29,6 +29,7 @@
 		CEBE5EAA2738B63600ADC273 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE5EA92738B63600ADC273 /* FocusView.swift */; };
 		CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */; };
 		CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F412737789A00DFDB42 /* PhotoPicker.swift */; };
+		CEF22D46273A3B4500BD6568 /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF22D45273A3B4500BD6568 /* NSImage+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		CEBE5EA92738B63600ADC273 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-iOS.swift"; sourceTree = "<group>"; };
 		CECE0F412737789A00DFDB42 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		CEF22D45273A3B4500BD6568 /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				CE42D0802737B45B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift */,
 				CE42D0822737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift */,
 				CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */,
+				CEF22D45273A3B4500BD6568 /* NSImage+Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900627376C93005239E2 /* DepthBrewerApp.swift in Sources */,
 				CEBE5EAA2738B63600ADC273 /* FocusView.swift in Sources */,
+				CEF22D46273A3B4500BD6568 /* NSImage+Extensions.swift in Sources */,
 				CE42D0882737C5AC009B8CA7 /* DepthBrewContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
