@@ -139,6 +139,11 @@ struct DepthBrewContentView: View {
                 runButton
             }
             
+            // Clean the depth data
+            ToolbarItem(placement: .navigation) {
+                cleanButton
+            }
+            
             // Select the depth type
             ToolbarItemGroup(placement: .confirmationAction) {
                 depthTypePicker
@@ -196,12 +201,25 @@ struct DepthBrewContentView: View {
         .disabled(depthDataImage == nil && !isDepthDataAvailable)
     }
     
+    /// Button to clean the depth data image
+    private var cleanButton: some View {
+        Button {
+            // clean
+            image = nil
+            cleanDepthData()
+        } label: {
+            Image(systemName: "trash")
+        }
+        .disabled(image == nil)
+    }
+    
     // MARK: -
     // Clean depthData
     private func cleanDepthData() {
         depthData = nil
         depthDataImage = nil
         depthDataProcessor = nil
+        isDepthDataAvailable = depthData != nil
     }
     
     // MARK: - Process a dropped image
