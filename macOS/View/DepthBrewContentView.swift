@@ -17,6 +17,8 @@ struct DepthBrewContentView: View {
     /// depth data image
     @State private var depthDataImage: NSImage?
     
+    @Binding var imageFilename: String?
+    
     /// depth data processor
     @State private var depthDataProcessor: DepthDataProcessor?
     
@@ -71,6 +73,7 @@ struct DepthBrewContentView: View {
                         case .success(let url):
                             guard let nsImage = NSImage(contentsOf: url) else { return }
                             image = nsImage
+                            imageFilename = url.deletingPathExtension().lastPathComponent
                             
                             depthData = AVDepthData.fromURL(url)
                             isDepthDataAvailable = depthData != nil
@@ -194,7 +197,14 @@ struct DepthBrewContentView: View {
     private var saveButton: some View {
         Button {
             // save depth data image
-            depthDataImage?.savePanel(fileName: "depth", contentType: .jpeg)
+            let filename: String
+            let selectedDepthTypeRawValue = depthTypes[depthTypeSelection].rawValue
+            if let imageFilename = imageFilename {
+                filename = "\(imageFilename)_\(selectedDepthTypeRawValue)"
+            } else {
+                filename = selectedDepthTypeRawValue
+            }
+            depthDataImage?.savePanel(filename: filename, contentType: .jpeg)
         } label: {
             Image(systemName: "square.and.arrow.up")
         }
@@ -247,6 +257,7 @@ struct DepthBrewContentView: View {
                       let nsImage = NSImage(contentsOf: url)
                 else { return }
                 image = nsImage
+                imageFilename = url.deletingPathExtension().lastPathComponent
                 
                 depthData = AVDepthData.fromURL(url)
                 isDepthDataAvailable = depthData != nil
@@ -270,7 +281,7 @@ struct DepthBrewContentView: View {
 
 struct DepthBrewContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DepthBrewContentView()
+        DepthBrewContentView(imageFilename: .constant(""))
             .frame(width: 600, height: 400, alignment: .center)
     }
 }

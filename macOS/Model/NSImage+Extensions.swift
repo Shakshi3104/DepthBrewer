@@ -11,7 +11,7 @@ import UniformTypeIdentifiers
 
 extension NSImage {
     // https://zenn.dev/link/comments/87ff25f41f8cea
-    func saveFile(at url: URL, fileName: String, fileType: NSBitmapImageRep.FileType) {
+    func saveFile(at url: URL, filename: String, fileType: NSBitmapImageRep.FileType) {
         guard let data = self.tiffRepresentation,
               let bitmapRep = NSBitmapImageRep(data: data),
               let imageData = bitmapRep.representation(using: fileType, properties: [:])
@@ -28,17 +28,17 @@ extension NSImage {
         @unknown default: fileExtension = ""
         }
         
-        var saveURL = url.appendingPathComponent(fileName).appendingPathExtension(fileExtension)
+        var saveURL = url.appendingPathComponent(filename).appendingPathExtension(fileExtension)
         var cnt = 2
         while FileManager.default.fileExists(atPath: saveURL.path) {
-            saveURL = url.appendingPathComponent("\(fileName) \(cnt)").appendingPathExtension(fileExtension)
+            saveURL = url.appendingPathComponent("\(filename) \(cnt)").appendingPathExtension(fileExtension)
             cnt += 1
         }
         try? imageData.write(to: saveURL, options: .atomic)
     }
     
     // https://software.small-desk.com/development/2021/01/23/swiftui-image-app-step5/
-    func savePanel(fileName: String, contentType: UTType = .jpeg) {
+    func savePanel(filename: String, contentType: UTType = .jpeg) {
         let fileType: NSBitmapImageRep.FileType
         switch contentType {
         case .jpeg: fileType = .jpeg
@@ -58,7 +58,7 @@ extension NSImage {
         savePanel.canCreateDirectories = true
         savePanel.showsTagField = false
         savePanel.isExtensionHidden = false
-        savePanel.nameFieldStringValue = "\(fileName)"
+        savePanel.nameFieldStringValue = filename
         savePanel.canSelectHiddenExtension = true
         savePanel.allowedContentTypes = [contentType]
         savePanel.begin { result in

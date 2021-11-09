@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct DepthBrewView_macOS: View {
+    
+    @State private var filename: String?
         
     var body: some View {
         NavigationView {
             Group {
                 List {
                     Section {
-                        Text("Brew Depth")
+                        Text(filename ?? "No filename")
                     }
                 }
                 
-                DepthBrewContentView()
+                DepthBrewContentView(imageFilename: $filename)
             }
         }
     }
