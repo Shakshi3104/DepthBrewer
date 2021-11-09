@@ -8,8 +8,8 @@
 import Foundation
 import AppKit
 
-// https://zenn.dev/link/comments/87ff25f41f8cea
 extension NSImage {
+    // https://zenn.dev/link/comments/87ff25f41f8cea
     func saveFile(at url: URL, fileName: String, fileType: NSBitmapImageRep.FileType) {
         guard let data = self.tiffRepresentation,
               let bitmapRep = NSBitmapImageRep(data: data),
@@ -36,6 +36,7 @@ extension NSImage {
         try? imageData.write(to: saveURL, options: .atomic)
     }
     
+    // https://software.small-desk.com/development/2021/01/23/swiftui-image-app-step5/
     func savePanel(fileName: String, fileType: NSBitmapImageRep.FileType) {
         guard let data = self.tiffRepresentation,
               let bitmapRep = NSBitmapImageRep(data: data),
