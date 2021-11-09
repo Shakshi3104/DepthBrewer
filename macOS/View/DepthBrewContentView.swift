@@ -189,7 +189,7 @@ struct DepthBrewContentView: View {
     private var saveButton: some View {
         Button {
             // save depth data image
-            depthDataImage?.savePanel(fileName: "depth", fileType: .jpeg)
+            depthDataImage?.savePanel(fileName: "depth", contentType: .jpeg)
         } label: {
             Image(systemName: "square.and.arrow.up")
         }
