@@ -27,7 +27,10 @@ DepthBrewer can obtain the depth data from a portrait image captured by the iPho
   <img src="materials/depthbrewer-macOS-5.png" width=512>
 </p>
 
+### Installation
 
+1. Download DepthBrewer.app.zip from [releases](https://github.com/Shakshi3104/DepthBrewer/releases).
+2. Unzip the file and move it to the Applications folder.
 
 ## Requirements
 - iOS 15+
