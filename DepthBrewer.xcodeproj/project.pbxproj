@@ -49,6 +49,10 @@
 		CE5E8F2F273CEFED00568F92 /* depthbrewer-macOS-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-5.png"; sourceTree = "<group>"; };
 		CE5E8F30273CEFED00568F92 /* depthbrewer-macOS-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-4.png"; sourceTree = "<group>"; };
 		CE5E8F31273CEFED00568F92 /* depthbrewer-macOS-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-3.png"; sourceTree = "<group>"; };
+		CE5E8F3F273CF3A700568F92 /* depthbrewer-iOS-on-macOS-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-on-macOS-2.png"; sourceTree = "<group>"; };
+		CE5E8F40273CF3A700568F92 /* depthbrewer-iOS-on-macOS-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-on-macOS-4.png"; sourceTree = "<group>"; };
+		CE5E8F41273CF3A800568F92 /* depthbrewer-iOS-on-macOS-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-on-macOS-3.png"; sourceTree = "<group>"; };
+		CE5E8F42273CF3A800568F92 /* depthbrewer-iOS-on-macOS-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-on-macOS-1.png"; sourceTree = "<group>"; };
 		CE6C8FF527376C92005239E2 /* DepthBrewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthBrewerApp.swift; sourceTree = "<group>"; };
 		CE6C8FF627376C92005239E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE6C8FF727376C93005239E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +126,10 @@
 				CE5E8F31273CEFED00568F92 /* depthbrewer-macOS-3.png */,
 				CE5E8F30273CEFED00568F92 /* depthbrewer-macOS-4.png */,
 				CE5E8F2F273CEFED00568F92 /* depthbrewer-macOS-5.png */,
+				CE5E8F42273CF3A800568F92 /* depthbrewer-iOS-on-macOS-1.png */,
+				CE5E8F3F273CF3A700568F92 /* depthbrewer-iOS-on-macOS-2.png */,
+				CE5E8F41273CF3A800568F92 /* depthbrewer-iOS-on-macOS-3.png */,
+				CE5E8F40273CF3A700568F92 /* depthbrewer-iOS-on-macOS-4.png */,
 			);
 			path = materials;
 			sourceTree = "<group>";
