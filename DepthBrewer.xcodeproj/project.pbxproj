@@ -37,6 +37,18 @@
 		CE42D0822737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-macOS.swift"; sourceTree = "<group>"; };
 		CE42D0852737B7CE009B8CA7 /* DepthBrewView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-macOS.swift"; sourceTree = "<group>"; };
 		CE42D0872737C5AC009B8CA7 /* DepthBrewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthBrewContentView.swift; sourceTree = "<group>"; };
+		CE5E8F25273CEAAF00568F92 /* depthbrewer-iOS-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-1.png"; sourceTree = "<group>"; };
+		CE5E8F26273CEAAF00568F92 /* depthbrewer-iOS-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-2.png"; sourceTree = "<group>"; };
+		CE5E8F27273CEAAF00568F92 /* depthbrewer-iOS-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-4.png"; sourceTree = "<group>"; };
+		CE5E8F28273CEAAF00568F92 /* depthbrewer-iOS-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-3.png"; sourceTree = "<group>"; };
+		CE5E8F29273CEBC000568F92 /* depthbrewer-iOS_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS_icon.png"; sourceTree = "<group>"; };
+		CE5E8F2B273CEDDD00568F92 /* depthbrewer-macOS_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS_icon.png"; sourceTree = "<group>"; };
+		CE5E8F2C273CEEDB00568F92 /* DepthBrewer-macOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DepthBrewer-macOS.png"; sourceTree = "<group>"; };
+		CE5E8F2D273CEFED00568F92 /* depthbrewer-macOS-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-1.png"; sourceTree = "<group>"; };
+		CE5E8F2E273CEFED00568F92 /* depthbrewer-macOS-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-2.png"; sourceTree = "<group>"; };
+		CE5E8F2F273CEFED00568F92 /* depthbrewer-macOS-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-5.png"; sourceTree = "<group>"; };
+		CE5E8F30273CEFED00568F92 /* depthbrewer-macOS-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-4.png"; sourceTree = "<group>"; };
+		CE5E8F31273CEFED00568F92 /* depthbrewer-macOS-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-macOS-3.png"; sourceTree = "<group>"; };
 		CE6C8FF527376C92005239E2 /* DepthBrewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthBrewerApp.swift; sourceTree = "<group>"; };
 		CE6C8FF627376C92005239E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE6C8FF727376C93005239E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,9 +107,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CE5E8F24273CEA9D00568F92 /* materials */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E8F2C273CEEDB00568F92 /* DepthBrewer-macOS.png */,
+				CE5E8F29273CEBC000568F92 /* depthbrewer-iOS_icon.png */,
+				CE5E8F2B273CEDDD00568F92 /* depthbrewer-macOS_icon.png */,
+				CE5E8F25273CEAAF00568F92 /* depthbrewer-iOS-1.png */,
+				CE5E8F26273CEAAF00568F92 /* depthbrewer-iOS-2.png */,
+				CE5E8F28273CEAAF00568F92 /* depthbrewer-iOS-3.png */,
+				CE5E8F27273CEAAF00568F92 /* depthbrewer-iOS-4.png */,
+				CE5E8F2D273CEFED00568F92 /* depthbrewer-macOS-1.png */,
+				CE5E8F2E273CEFED00568F92 /* depthbrewer-macOS-2.png */,
+				CE5E8F31273CEFED00568F92 /* depthbrewer-macOS-3.png */,
+				CE5E8F30273CEFED00568F92 /* depthbrewer-macOS-4.png */,
+				CE5E8F2F273CEFED00568F92 /* depthbrewer-macOS-5.png */,
+			);
+			path = materials;
+			sourceTree = "<group>";
+		};
 		CE6C8FEF27376C92005239E2 = {
 			isa = PBXGroup;
 			children = (
+				CE5E8F24273CEA9D00568F92 /* materials */,
 				CE9179142737F3B70059B20A /* README.md */,
 				CE6C8FF427376C92005239E2 /* Shared */,
 				CE6C900327376C93005239E2 /* macOS */,
@@ -497,6 +529,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,6 +559,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
