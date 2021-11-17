@@ -118,7 +118,9 @@ struct DepthBrewView_iOS: View {
                     .contextMenu {
                         Button {
                             // Save the depth data image
-                            depthDataProcessor?.saveToPhotoLibrary(depthType: depthTypeSelection)
+                            if let depthDataImage = depthDataImage {
+                                UIImageWriteToSavedPhotosAlbum(depthDataImage, nil, nil, nil)
+                            }
                         } label: {
                             HStack {
                                 Image(systemName: "square.and.arrow.down")
