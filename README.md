@@ -36,3 +36,6 @@ DepthBrewer can obtain the depth data from a portrait image captured by the iPho
 - iOS 15+
 - macOS 11+
 - Xcode 13+
+
+## Swift Package Dependencies
+- [Espresso](https://github.com/Shakshi3104/Espresso)
