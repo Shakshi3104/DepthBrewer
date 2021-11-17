@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE42D0832737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42D0822737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift */; };
-		CE42D0842737B47B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42D0802737B45B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift */; };
 		CE42D0862737B7CE009B8CA7 /* DepthBrewView-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42D0852737B7CE009B8CA7 /* DepthBrewView-macOS.swift */; };
 		CE42D0882737C5AC009B8CA7 /* DepthBrewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42D0872737C5AC009B8CA7 /* DepthBrewContentView.swift */; };
 		CE6C900527376C93005239E2 /* DepthBrewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8FF527376C92005239E2 /* DepthBrewerApp.swift */; };
@@ -17,15 +15,8 @@
 		CE6C900827376C93005239E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8FF627376C92005239E2 /* ContentView.swift */; };
 		CE6C900927376C93005239E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6C8FF727376C93005239E2 /* Assets.xcassets */; };
 		CE6C900A27376C93005239E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6C8FF727376C93005239E2 /* Assets.xcassets */; };
-		CE6C901627376F69005239E2 /* AVDepthData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */; };
-		CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */; };
-		CE6C901B27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */; };
-		CE6C901C27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */; };
-		CE6C901F273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */; };
-		CE6C902427377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
-		CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C902327377180005239E2 /* DepthDataProcessor.swift */; };
-		CE6C90272737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */; };
-		CEB9CD942737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */; };
+		CE8915832744A3A300CDB798 /* Espresso in Frameworks */ = {isa = PBXBuildFile; productRef = CE8915822744A3A300CDB798 /* Espresso */; };
+		CE8915862744A80D00CDB798 /* Espresso in Frameworks */ = {isa = PBXBuildFile; productRef = CE8915852744A80D00CDB798 /* Espresso */; };
 		CEBE5EAA2738B63600ADC273 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBE5EA92738B63600ADC273 /* FocusView.swift */; };
 		CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */; };
 		CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE0F412737789A00DFDB42 /* PhotoPicker.swift */; };
@@ -33,8 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE42D0802737B45B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions-macOS.swift"; sourceTree = "<group>"; };
-		CE42D0822737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-macOS.swift"; sourceTree = "<group>"; };
 		CE42D0852737B7CE009B8CA7 /* DepthBrewView-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-macOS.swift"; sourceTree = "<group>"; };
 		CE42D0872737C5AC009B8CA7 /* DepthBrewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthBrewContentView.swift; sourceTree = "<group>"; };
 		CE5E8F25273CEAAF00568F92 /* depthbrewer-iOS-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depthbrewer-iOS-1.png"; sourceTree = "<group>"; };
@@ -59,13 +48,7 @@
 		CE6C8FFC27376C93005239E2 /* DepthBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C900227376C93005239E2 /* DepthBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C900427376C93005239E2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVDepthData+Extensions.swift"; sourceTree = "<group>"; };
-		CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions.swift"; sourceTree = "<group>"; };
-		CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Extensions-iOS.swift"; sourceTree = "<group>"; };
-		CE6C902327377180005239E2 /* DepthDataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthDataProcessor.swift; sourceTree = "<group>"; };
-		CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DepthDataProcessor+Extensions-iOS.swift"; sourceTree = "<group>"; };
 		CE9179142737F3B70059B20A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVDepthData+Extensions-macOS.swift"; sourceTree = "<group>"; };
 		CEBE5EA92738B63600ADC273 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		CECE0F3F2737786200DFDB42 /* DepthBrewView-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DepthBrewView-iOS.swift"; sourceTree = "<group>"; };
 		CECE0F412737789A00DFDB42 /* PhotoPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -77,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8915832744A3A300CDB798 /* Espresso in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8915862744A80D00CDB798 /* Espresso in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,9 +78,6 @@
 		CE42D07E2737B433009B8CA7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE42D0802737B45B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift */,
-				CE42D0822737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift */,
-				CEB9CD932737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift */,
 				CEF22D45273A3B4500BD6568 /* NSImage+Extensions.swift */,
 			);
 			path = Model;
@@ -143,13 +125,13 @@
 				CE6C900327376C93005239E2 /* macOS */,
 				CE6C901327376D45005239E2 /* iOS */,
 				CE6C8FFD27376C93005239E2 /* Products */,
+				CE8915842744A80D00CDB798 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CE6C8FF427376C92005239E2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CE6C901427376F4E005239E2 /* Model */,
 				CE6C8FF527376C92005239E2 /* DepthBrewerApp.swift */,
 				CE6C8FF627376C92005239E2 /* ContentView.swift */,
 				CE6C8FF727376C93005239E2 /* Assets.xcassets */,
@@ -180,28 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6C90202737713E005239E2 /* View */,
-				CE6C901D273770D1005239E2 /* Model */,
 			);
 			path = iOS;
-			sourceTree = "<group>";
-		};
-		CE6C901427376F4E005239E2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE6C901527376F69005239E2 /* AVDepthData+Extensions.swift */,
-				CE6C901A27377085005239E2 /* CVPixelBuffer+Extensions.swift */,
-				CE6C902327377180005239E2 /* DepthDataProcessor.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CE6C901D273770D1005239E2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE6C901E273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift */,
-				CE6C90262737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CE6C90202737713E005239E2 /* View */ = {
@@ -211,6 +173,13 @@
 				CECE0F412737789A00DFDB42 /* PhotoPicker.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CE8915842744A80D00CDB798 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +198,9 @@
 			dependencies = (
 			);
 			name = "DepthBrewer (iOS)";
+			packageProductDependencies = (
+				CE8915822744A3A300CDB798 /* Espresso */,
+			);
 			productName = "DepthBrewer (iOS)";
 			productReference = CE6C8FFC27376C93005239E2 /* DepthBrewer.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +218,9 @@
 			dependencies = (
 			);
 			name = "DepthBrewer (macOS)";
+			packageProductDependencies = (
+				CE8915852744A80D00CDB798 /* Espresso */,
+			);
 			productName = "DepthBrewer (macOS)";
 			productReference = CE6C900227376C93005239E2 /* DepthBrewer.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +252,9 @@
 				Base,
 			);
 			mainGroup = CE6C8FEF27376C92005239E2;
+			packageReferences = (
+				CE8915812744A3A300CDB798 /* XCRemoteSwiftPackageReference "Espresso" */,
+			);
 			productRefGroup = CE6C8FFD27376C93005239E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,15 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6C90272737745D005239E2 /* DepthDataProcessor+Extensions-iOS.swift in Sources */,
 				CE6C900727376C93005239E2 /* ContentView.swift in Sources */,
 				CECE0F422737789A00DFDB42 /* PhotoPicker.swift in Sources */,
 				CECE0F402737786200DFDB42 /* DepthBrewView-iOS.swift in Sources */,
-				CE6C901B27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */,
-				CE6C902427377180005239E2 /* DepthDataProcessor.swift in Sources */,
-				CE6C901627376F69005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900527376C93005239E2 /* DepthBrewerApp.swift in Sources */,
-				CE6C901F273770EB005239E2 /* CVPixelBuffer+Extensions-iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,14 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE42D0832737B476009B8CA7 /* DepthDataProcessor+Extensions-macOS.swift in Sources */,
-				CE42D0842737B47B009B8CA7 /* CVPixelBuffer+Extensions-macOS.swift in Sources */,
 				CE6C900827376C93005239E2 /* ContentView.swift in Sources */,
-				CE6C902527377180005239E2 /* DepthDataProcessor.swift in Sources */,
 				CE42D0862737B7CE009B8CA7 /* DepthBrewView-macOS.swift in Sources */,
-				CE6C901C27377085005239E2 /* CVPixelBuffer+Extensions.swift in Sources */,
-				CEB9CD942737EDC6003D1B35 /* AVDepthData+Extensions-macOS.swift in Sources */,
-				CE6C901727376F73005239E2 /* AVDepthData+Extensions.swift in Sources */,
 				CE6C900627376C93005239E2 /* DepthBrewerApp.swift in Sources */,
 				CEBE5EAA2738B63600ADC273 /* FocusView.swift in Sources */,
 				CEF22D46273A3B4500BD6568 /* NSImage+Extensions.swift in Sources */,
@@ -614,6 +581,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE8915812744A3A300CDB798 /* XCRemoteSwiftPackageReference "Espresso" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Shakshi3104/Espresso";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE8915822744A3A300CDB798 /* Espresso */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8915812744A3A300CDB798 /* XCRemoteSwiftPackageReference "Espresso" */;
+			productName = Espresso;
+		};
+		CE8915852744A80D00CDB798 /* Espresso */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8915812744A3A300CDB798 /* XCRemoteSwiftPackageReference "Espresso" */;
+			productName = Espresso;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE6C8FF027376C92005239E2 /* Project object */;
 }

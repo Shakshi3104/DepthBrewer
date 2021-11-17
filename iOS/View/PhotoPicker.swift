@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import PhotosUI
+import Espresso
 
 // MARK: - PhotoPicker: Wrapper of PHPickerViewController
 // https://qiita.com/lcr/items/f9e98f76a48af0920bb1
@@ -60,15 +61,9 @@ struct PhotoPicker: UIViewControllerRepresentable {
                     
                     print("🎛 URL from PHAsset: \(inputURL)")
                     
-                    let ciImage = CIImage(contentsOf: inputURL,
-                                          options: [CIImageOption.auxiliaryDepth: true,
-                                                    CIImageOption.applyOrientationProperty: true])
-                    guard let ciImage = ciImage else { return }
+                    let depthData = AVDepthData.fromURL(inputURL)
                     
-                    let exifDictionary = ciImage.properties
-                    print(exifDictionary)
-                    
-                    if let depthData = ciImage.depthData {
+                    if let depthData = depthData {
                         print(depthData)
                         self.parent.pickeredImageDepthData = depthData
                     } else {
